@@ -10,8 +10,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class PhotoViewModel : ViewModel() {
+    lateinit var photoData: LiveData<List<PhotoData>>
     fun getDataFomRepository(repository: DataRepository): LiveData<List<PhotoData>> {
-        lateinit var photoData: LiveData<List<PhotoData>>
 
         //Convert flow to livedata using asLiveData()
         viewModelScope.launch {
