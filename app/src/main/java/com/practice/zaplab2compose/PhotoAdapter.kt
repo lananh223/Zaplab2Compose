@@ -9,8 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.practice.zaplab2compose.model.PhotoData
+import javax.inject.Inject
 
-class PhotoAdapter(var photoDataList: List<PhotoData>) :
+class PhotoAdapter @Inject constructor(var photoDataList: List<PhotoData>) :
     RecyclerView.Adapter<PhotoAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val image: ImageView = view.findViewById(R.id.image)

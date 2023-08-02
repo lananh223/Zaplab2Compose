@@ -3,17 +3,17 @@ package com.practice.zaplab2compose
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.practice.zaplab2compose.model.DataRepository
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val photoViewModel: PhotoViewModel by lazy {
-        ViewModelProvider(this)[PhotoViewModel::class.java]
-    }
+    private val photoViewModel: PhotoViewModel by viewModels()
 
     private lateinit var recyclerView: RecyclerView
     private var photoAdapter = PhotoAdapter(emptyList())
