@@ -1,6 +1,5 @@
-package com.practice.zaplab2compose
+package com.practice.zaplab2compose.model
 
-import com.practice.zaplab2compose.model.PhotoData
 import retrofit2.http.GET
 
 interface DataService {
